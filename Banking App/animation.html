@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="can" width="800" height="600" style="background-color: grey;border:solid blue; background-color: black;"> </canvas>
+<script type="text/javascript">
+	var c= document.getElementById('can')
+	var handle = c.getContext('2d')
+	var x=0;
+	var y=0;
+	// var speed=200
+	// var slow=200
+
+
+	
+	
+	function car() {
+		if (y<=500) {
+			// var img = new Image ();
+			var img = new Image ();
+        img.src='car.png';
+        img.onload=()=>{
+
+            handle.drawImage(img,x,y,205,205)
+
+             y +=10;
+			
+			}	
+			handle .clearRect(x,y,800,600)
+         } else {
+         	y=20
+         }
+		
+
+             
+            setTimeout(car,100)
+		}
+	
+
+
+
+
+
+
+
+
+
+		// if (x<=100) {
+		// 	// var img = new Image ();
+		// 	var img = new Image ();
+        // img.src='car.png';
+        // img.onload=()=>{
+
+        //     handle.drawImage(img,z,q,200,205)
+
+        //      y +=10;
+			
+		// 	}	
+		// 	handle .clearRect(0,0,800,600)
+        //  } else {
+        //  	y=20;
+        //  }
+		
+
+             
+        //     setTimeout(car,1000)
+
+	
+	car()
+	
+// 	myCar=new car;
+// myCar()
+</script>
+</body>
+</html>
